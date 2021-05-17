@@ -14,7 +14,8 @@ const images = [
 ];
 
 const arrayOfItem = images.map((item) => {
-  return `<li  class='gallary-item'><image src='${item.url}' alt='${item.alt}' width = 320 height = 200></li>`;
+  return `<li  class='gallery-item'><image src='${item.url}' alt='${item.alt}'
+   width = 320 height = 200></li>`;
 });
 
 const gallaryListEl = document.querySelector("ul#gallery");

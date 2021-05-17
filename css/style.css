@@ -5,7 +5,7 @@
   list-style: none;
 }
 
-.gallary-item + .gallary-item {
+.gallery-item + .gallery-item {
   margin-left: 40px;
 }
 image {
