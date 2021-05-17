@@ -12,17 +12,14 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-const makeGalleryCollection = (images) => {
-  const arrayOfItem = images.map((item) => {
-    return `<li  class='gallary-item'><image src='${item.url}' alt='${item.alt}' width = 320 height = 200></li>`;
-  });
-  return arrayOfItem;
-};
-const arrayOfItems = makeGalleryCollection(images);
+
+const arrayOfItem = images.map((item) => {
+  return `<li  class='gallary-item'><image src='${item.url}' alt='${item.alt}' width = 320 height = 200></li>`;
+});
 
 const gallaryListEl = document.querySelector("ul#gallery");
 
-gallaryListEl.insertAdjacentHTML("beforeend", arrayOfItems);
+gallaryListEl.insertAdjacentHTML("beforeend", arrayOfItem);
 
 //===== не через шаблонную строку ======
 // const galleryList = document.querySelector("ul#gallery");
