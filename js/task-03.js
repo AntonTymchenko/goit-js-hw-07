@@ -13,10 +13,12 @@ const images = [
   },
 ];
 
-const arrayOfItem = images.map((item) => {
-  return `<li  class='gallery-item'><image src='${item.url}' alt='${item.alt}'
+const arrayOfItem = images
+  .map((item) => {
+    return `<li  class='gallery-item'><image src='${item.url}' alt='${item.alt}'
    width = 320 height = 200></li>`;
-});
+  })
+  .join("");
 
 const gallaryListEl = document.querySelector("ul#gallery");
 
