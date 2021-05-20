@@ -27,6 +27,7 @@ function createBoxes() {
 
     div.style.width = 30 + "px";
     div.style.height = 30 + "px";
+
     if (i !== 0) {
       div.style.width = parseInt(div.style.width) + 10 * i + "px";
       div.style.height = parseInt(div.style.height) + 10 * i + "px";
