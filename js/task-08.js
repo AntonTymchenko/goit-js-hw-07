@@ -10,15 +10,15 @@ refs.input.addEventListener("input", onInput);
 
 function onInput(event) {
   if (event) amount = refs.input.value;
-  console.log(amount);
 }
 
 refs.btnClear.addEventListener("click", () => (refs.divBoxes.innerHTML = ""));
 refs.btnRender.addEventListener("click", createBoxes);
 
 function createBoxes() {
-  let i = 0;
-  while (i < +amount) {
+  const divArray = [];
+  refs.divBoxes.innerHTML = "";
+  for (let i = 0; i < refs.input.value; i += 1) {
     const div = document.createElement("div");
     div.style.backgroundColor = `rgb(${getRandom(0, 255)}, ${getRandom(
       0,
@@ -32,9 +32,10 @@ function createBoxes() {
       div.style.width = parseInt(div.style.width) + 10 * i + "px";
       div.style.height = parseInt(div.style.height) + 10 * i + "px";
     }
-    refs.divBoxes.appendChild(div);
-    i += 1;
+    divArray.push(div);
   }
+  refs.input.value = "";
+  refs.divBoxes.append(...divArray);
 }
 
 function getRandom(min, max) {
